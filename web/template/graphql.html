@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+<h1>Graphql Test</h1>
+<p>Tasks:</p>
+
+{{ range .tasks }}
+<p>
+    <b>{{.title}}</b> {{ .user.name }} {{ .status.status }}
+</p>
+{{ end }}
+</body>

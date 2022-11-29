@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+<h1>Gorm Test</h1>
+<p>Tasks:</p>
+
+{{ range .Tasks }}
+<p>
+    <b>{{.Title}}</b> {{ .User.Name }} {{ .Status.Status }}
+</p>
+{{ end }}
+</body>

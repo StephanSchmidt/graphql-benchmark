@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+<h1>SQLX Test</h1>
+<p>Tasks:</p>
+
+{{ range .Tasks }}
+<p>
+    <b>{{.Title}}</b> {{ .Name }} {{ .Status }}
+</p>
+{{ end }}
+</body>
