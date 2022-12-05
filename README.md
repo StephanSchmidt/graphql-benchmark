@@ -17,4 +17,9 @@ Each test is run with 1,5,10,15,20,25,30,35,40 VUs simulating more concurrent us
 
 ## Results
 
+![Med](images/med.png?raw=true "Med")
+
+![P90](images/p90.png?raw=true "P90")
+
+![Requests](images/req.png?raw=true "Requests")
 
