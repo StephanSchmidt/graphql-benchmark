@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+<h1>JSON PGX Test</h1>
+<p>Tasks:</p>
+
+{{ range .tasks }}
+<p>
+    <b>{{.title}}</b>: {{.name}} {{.status}}
+</p>
+{{ end }}
+</body>

@@ -8,12 +8,14 @@ import (
 	"gorm.io/gorm"
 	gormweb "inkmi/internal/gormbench/web"
 	gql "inkmi/internal/graphqlbench/web"
+	jsonpgx "inkmi/internal/jsonpgx/web"
 	pgx "inkmi/internal/pgxbench/web"
 	sqlxweb "inkmi/internal/sqlxbench/web"
 )
 
 func configRoutes(e *echo.Echo, pool *pgxpool.Pool, gj *core.GraphJin, db *gorm.DB, xdb *sqlx.DB) {
 	e.GET("/pgx", pgx.PgxPage(pool)).Name = "Pgx"
+	e.GET("/jsonpgx", jsonpgx.JsonPgxPage(pool)).Name = "JsonPgx"
 	e.GET("/sqlx", sqlxweb.SqlxPage(xdb)).Name = "Sqlx"
 	e.GET("/graphql", gql.GraphQlPage(pool, gj)).Name = "Graphql"
 	e.GET("/gorm", gormweb.GormPage(db)).Name = "Gorm"

@@ -31,8 +31,12 @@ func main() {
 	dbConn.SetMaxIdleConns(10)
 	dbConn.SetConnMaxLifetime(time.Hour)
 	defer dbConn.Close()
-
-	gj, err := core.NewGraphJin(nil, dbConn)
+	conf := &core.Config{
+		Production:       true,
+		DisableAllowList: true,
+	}
+	gj, err := core.NewGraphJin(conf, dbConn)
+	gj.IsProd()
 
 	db, err := gorm.Open(postgres.Open("postgres://graphjin:graphjin@localhost:5432/graphjin"), &gorm.Config{})
 	sqlDB, err := db.DB()
