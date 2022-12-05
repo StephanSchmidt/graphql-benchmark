@@ -3,6 +3,8 @@
 
 This repository is for measuring the performance of different database connections in Golang.
 
+There is a longer [blog post](https://www.amazingcto.com/graphql-for-server-development/) that explains what is going on.
+
 We use PGX for the database driver, GORM for the ORM and Graphjin for the GraphQL connector.
 
 For each test a web page is implemented that reads a list of Todos (tasks) from a database and rendered into HTML.
