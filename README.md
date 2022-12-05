@@ -1,7 +1,9 @@
 
 # Measuring Performance of plain SQL, SQL that generates JSON, an ORM and GraphQL
 
-This repository is for measuring the preformance of different database connections in Golang.
+This repository is for measuring the performance of different database connections in Golang.
+
+We use PGX for the database driver, GORM for the ORM and Graphjin for the GraphQL connector.
 
 For each test a web page is implemented that reads a list of Todos (tasks) from a database and rendered into HTML.
 
